@@ -1,5 +1,5 @@
-import javax.mail.Session;
-import com.emailsender.EmailSender;
+/*import javax.mail.Session;
+import com.emailsender.EmailSender;*/
 public class Main {
 	public static void main(String[] args) {
 		// INIT VALUES FOR CONNECTING TO GMAIL

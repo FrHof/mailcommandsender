@@ -8,17 +8,19 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
-import java.awt.event.WindowEvent;
 
 public class LoginPage extends JFrame{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	final private String user = "test";
 	final private String passw = "test";
 	private JTextField userTf;
 	private JPasswordField passwPf;
 	boolean auth_verified;
 	LoginPage(){
-		// TODO CHANGE THE CALL TO FIELD WITH A CALL TO GETTER AND SETTER
-		this.auth_verified = false;
+		setAuth_verified(false);
 		setSize(615, 345);
 		setTitle("Connexion");
 		setResizable(false);
@@ -26,13 +28,14 @@ public class LoginPage extends JFrame{
 		usernameLab.setBounds(180,51,97,15);
 		JTextField username = new JTextField();
 		username.setBounds(180,70,254,40);
-		this.userTf = username;
+		setUserTf(username);
 		
 		JLabel passwordLab = new JLabel("Mot de passe");
 		passwordLab.setBounds(180,120,78,15);
 		JPasswordField password = new JPasswordField();
 		password.setBounds(180,140,255,40);
-		this.passwPf = password;
+		setPasswPf(password);
+		
 		JButton button = new JButton("Valider");
 		button.addActionListener(new ActionListener() {
 		     public void actionPerformed(ActionEvent e) {
